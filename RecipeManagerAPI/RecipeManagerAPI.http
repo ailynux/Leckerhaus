@@ -1,0 +1,6 @@
+@RecipeManagerAPI_HostAddress = http://localhost:5212
+
+GET {{RecipeManagerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

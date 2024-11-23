@@ -1,0 +1,1 @@
+SELECT * FROM Recipes WHERE Id = @Id;
