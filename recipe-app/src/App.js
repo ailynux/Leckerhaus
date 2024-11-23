@@ -19,10 +19,15 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
+import SettingsIcon from "@mui/icons-material/Settings";
+import PersonIcon from "@mui/icons-material/Person";
 import theme from "./theme";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Recipes from "./pages/Recipes";
+import Settings from "./pages/Settings";
+import User from "./pages/User";
 
 const drawerWidth = 200;
 
@@ -96,19 +101,73 @@ function App() {
                   <ListItemIcon>
                     <HomeIcon sx={{ color: "#ffffff" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Home" />
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                        Home
+                      </Typography>
+                    }
+                  />
                 </ListItem>
                 <ListItem button component={Link} to="/about">
                   <ListItemIcon>
                     <InfoIcon sx={{ color: "#ffffff" }} />
                   </ListItemIcon>
-                  <ListItemText primary="About" />
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                        About
+                      </Typography>
+                    }
+                  />
                 </ListItem>
                 <ListItem button component={Link} to="/contact">
                   <ListItemIcon>
                     <ContactMailIcon sx={{ color: "#ffffff" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Contact" />
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                        Contact
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+                <ListItem button component={Link} to="/recipes">
+                  <ListItemIcon>
+                    <MenuBookIcon sx={{ color: "#ffffff" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                        Recipes
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+                <ListItem button component={Link} to="/user">
+                  <ListItemIcon>
+                    <PersonIcon sx={{ color: "#ffffff" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                        User
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+                <ListItem button component={Link} to="/settings">
+                  <ListItemIcon>
+                    <SettingsIcon sx={{ color: "#ffffff" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                        Settings
+                      </Typography>
+                    }
+                  />
                 </ListItem>
               </List>
             </Box>
@@ -125,6 +184,9 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/recipes" element={<Recipes />} />
+                <Route path="/user" element={<User />} />
+                <Route path="/settings" element={<Settings />} />
               </Routes>
             </Container>
           </Box>
