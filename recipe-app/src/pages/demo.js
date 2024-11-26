@@ -10,6 +10,7 @@ import Chip from "@mui/material/Chip";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 
+//this is for a demo modal
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2)
